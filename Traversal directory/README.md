@@ -1,7 +1,7 @@
-# Traversal Directory
-A directory traversal consists in exploiting insufficient security validation / sanitization of user-supplied input file names, so that characters representing "traverse to parent directory" are passed through to the file APIs.	
+# 遍历目录
+目录遍历包括利用用户提供的输入文件名的安全验证/卫生处理，以便表示“遍历到父目录”的字符被传递到文件APIs。
 
-## Exploit
+## 开发
 
 ```
 ../
@@ -16,5 +16,5 @@ A directory traversal consists in exploiting insufficient security validation / 
 ...\.\
 ```
 
-## Thanks to
+## 致谢
 * 
