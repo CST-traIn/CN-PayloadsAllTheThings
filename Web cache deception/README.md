@@ -1,6 +1,6 @@
 # Web缓存欺骗攻击
 
-## 开发
+## 攻击
 ```
 1.Browser requests http://www.example.com/home.php/non-existent.css.
 2.Server returns the content of http://www.example.com/home.php, most probably with HTTP caching headers that instruct to not cache this page.
