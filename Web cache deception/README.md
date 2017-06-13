@@ -1,6 +1,6 @@
-# Web Cache Deception Attack
+# Web缓存欺骗攻击
 
-## Exploit
+## 开发
 ```
 1.Browser requests http://www.example.com/home.php/non-existent.css.
 2.Server returns the content of http://www.example.com/home.php, most probably with HTTP caching headers that instruct to not cache this page.
@@ -9,7 +9,7 @@
 5.Under the cache directory, the proxy creates a directory named home.php, and caches the imposter "CSS" file (non-existent.css) inside.
 ```
 
-## Methodology of the attack - example
+## 攻击方法 - 示例
 ```
 1. Normal browsing, visit home : https://www.example.com/myaccount/home/
 2. Open the malicious link : https://www.example.com/myaccount/home/malicious.css
@@ -19,7 +19,7 @@
 ```
 
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/pLte7SomUB8/0.jpg)](https://www.youtube.com/watch?v=pLte7SomUB8)   
-Video of the attack by Omer Gil - Web Cache Deception Attack in PayPal Home Page
+Omer Gil的攻击视频 - 在PayPal主页上的网络缓存攻击
 
-## Thanks to
+## 致谢
 * http://omergil.blogspot.fr/2017/02/web-cache-deception-attack.html
